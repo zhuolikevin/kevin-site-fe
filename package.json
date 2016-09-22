@@ -11,5 +11,8 @@
   "devDependencies": {
     "fis-parser-less": "^0.1.3",
     "fis3": "^3.4.24"
+  },
+  "dependencies": {
+    "progressbar.js": "^1.0.1"
   }
 }

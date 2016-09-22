@@ -66,15 +66,40 @@ body { background: #f5ead7; }
         .flex-direction-column;
         .align-items-center;
         .justify-content-center;
+        #profile-circle {
+            width: 154px;
+            height: 154px;
+        }
         .profile {
             height: 150px;
-            border-radius: 50%;
+            width: 150px;
             margin: 15px 0;
+            position: relative;
+            border-radius: 50%;
             box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.2);
+            img {
+                height: 150px;
+                border-radius: 50%;
+            }
+            #profile-circle {
+                position: absolute;
+                top: -2px;
+                left: -2px;
+            }
+        }
+        .name {
+            font: 30px "homemade-apple";
+            margin-top: 10px;
+            position: relative;
+            top: 10px;
+            opacity: 0;
         }
         .slogan {
             font-family: "ubuntu-regular";
             margin: 15px 0;
+            position: relative;
+            top: 10px;
+            opacity: 0;
             ul > li {
                 display: inline-block;
                 padding: 0 15px;
@@ -86,6 +111,9 @@ body { background: #f5ead7; }
         }
         .position {
             margin: 15px 0 10px;
+            position: relative;
+            top: 10px;
+            opacity: 0;
             a {
                 color: #ed4040;
                 &:hover {
@@ -94,6 +122,9 @@ body { background: #f5ead7; }
             }
         }
         .contact {
+            position: relative;
+            top: 10px;
+            opacity: 0;
             margin: 10px 0;
             font-size: 14px;
         }

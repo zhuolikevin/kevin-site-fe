@@ -74,6 +74,7 @@
         }]
     },
     "globals": {
-        "fis": false
+        "fis": false,
+        "ProgressBar": false
     }
 }
