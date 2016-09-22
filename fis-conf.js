@@ -23,6 +23,12 @@ fis.match('static/css/(*.less)', {
     release: 'static/css/$1'
 });
 
+fis.match('static/css/lib/*.css', {
+    useSprite: true,
+    optimizer: fis.plugin('clean-css'),
+    release: '$0'
+});
+
 fis.match('static/images/(*.{png,ico})', {
     optimizer: fis.plugin('png-compressor'),
     release: 'static/images/$1'

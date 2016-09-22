@@ -1,5 +1,114 @@
 @import "global.less";
 
-body {
-    font-size: 12px;
+body { background: #f5ead7; }
+
+#nav-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    padding: 0 30px;
+    .nav-left {
+        float: left;
+        height: 100%;
+        ul {
+            .display-flex;
+            .align-items-center;
+            height: 100%;
+            li {
+                .display-inline-flex;
+                .align-items-center;
+                padding: 0 10px;
+                cursor: pointer;
+                height: 100%;
+                box-sizing: border-box;
+                position: relative;
+                &.active {
+                    color: #5f91a0;
+                }
+                &:hover {
+                    color: #5f91a0;
+                    &:before {
+                        -webkit-transform: scaleX(0.9);
+                        -ms-transform: scaleX(0.9);
+                        transform: scaleX(0.9);
+                    }
+                }
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                    height: 0px;
+                    border-bottom: 2px solid #5f91a0;
+                    bottom: 2px;
+                    -webkit-transform: scaleX(0);
+                    -ms-transform: scaleX(0);
+                    transform: scaleX(0);
+                    -webkit-transition: -webkit-transform 0.3s ease-in;
+                    transition: transform 0.3s ease-in;
+                }
+            }
+        }
+    }
+}
+
+#home-content {
+    .display-flex;
+    .align-items-center;
+    .justify-content-center;
+    font-size: 20px;
+    height: 100vh;
+    width: 100%;
+    .content {
+        .display-flex;
+        .flex-direction-column;
+        .align-items-center;
+        .justify-content-center;
+        .profile {
+            height: 150px;
+            border-radius: 50%;
+            margin: 15px 0;
+            box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .slogan {
+            font-family: "ubuntu-regular";
+            margin: 15px 0;
+            ul > li {
+                display: inline-block;
+                padding: 0 15px;
+                text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+                &:not(:last-child) {
+                    border-right: 1px solid #b9b9b9;
+                }
+            }
+        }
+        .position {
+            margin: 15px 0 10px;
+            a {
+                color: #ed4040;
+                &:hover {
+                    color: #c53232;
+                }
+            }
+        }
+        .contact {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+    }
+}
+
+#source-description {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    a {
+        color: #000;
+        cursor: pointer;
+        &:hover {
+            color: #909090;
+        }
+    }
 }
