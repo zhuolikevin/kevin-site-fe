@@ -1,47 +1,4 @@
-var TOTAL_DOTS = 50;
-var CANVAS_WIDTH = 800;
-var CANVAS_HEIGHT = 20;
-var PACMAN_COLOR = '#fffb00';
-
-var DOTS_INTERVAL = CANVAS_WIDTH / TOTAL_DOTS;
-var PACMAN_RADIUS = DOTS_INTERVAL / 2;
-
-function drawPacLine(percentage) {
-    var canvas = document.getElementById('pac-line');
-    if (canvas.getContext) {
-        var ctx = canvas.getContext('2d');
-
-        ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-
-        // Pac-dots
-        ctx.save();
-        ctx.translate(DOTS_INTERVAL / 2, CANVAS_HEIGHT / 2);
-        for (var i = Math.floor(percentage / 2); i < TOTAL_DOTS; i++) {
-            ctx.save();
-            ctx.translate(i * DOTS_INTERVAL, 0);
-            ctx.beginPath();
-            ctx.arc(0, 0, 2, 0, Math.PI * 2);
-            ctx.closePath();
-            ctx.fill();
-            ctx.restore();
-        }
-        ctx.restore();
-
-        // Pacman
-        ctx.save();
-        ctx.translate((percentage - 1) * DOTS_INTERVAL / 2, CANVAS_HEIGHT / 2);
-        ctx.fillStyle = PACMAN_COLOR;
-        ctx.beginPath();
-        if (percentage % 2 === 0) {
-            ctx.arc(0, 0, PACMAN_RADIUS, 0, Math.PI * 2);
-        } else {
-            ctx.arc(0, 0, PACMAN_RADIUS, Math.PI / 7, -Math.PI / 7);
-        }
-        ctx.lineTo(0, 0);
-        ctx.fill();
-        ctx.restore();
-    }
-}
+var PacProgress = require('pacprogress');
 
 $(document)
     .ready(function() {
@@ -71,10 +28,14 @@ $(document)
         });
         bar.animate(1.0);
 
-        var i = 0;
+        var i = 0,
+            pacLine = new PacProgress({
+                width: 800,
+                height: 20
+            });
         setInterval(function() {
-            drawPacLine(i);
+            pacLine.draw(i);
             i = (i + 1) % 100;
-        }, 200);
+        }, 500);
     }
 );
