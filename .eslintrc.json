@@ -44,7 +44,7 @@
         "linebreak-style": ["error", "unix"],
         "lines-around-comment": ["error", { "beforeBlockComment": true }],
         "max-depth": ["warn", 5],
-        "max-len": ["warn", 80],
+        "max-len": ["warn", 120],
         "no-multiple-empty-lines": "warn",
         "no-tabs": "error",
         "no-trailing-spaces": "error",
