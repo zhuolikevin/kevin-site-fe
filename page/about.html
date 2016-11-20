@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ZK's site</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="author" content="Kevin Li" />
+    <meta name="keywords" content="ZK Kevin Zhuo" />
+    <meta name="description" content="Kevin Li's site" />
+    <!-- for FF, Chrome, Opera -->
+    <link rel="icon" type="image/x-icon" href="../static/images/favicon.ico" />
+    <!-- for IE -->
+    <link rel="shortcut icon" type="image/x-icon" href="../static/images/favicon.ico" />
+
+    <link href="../static/css/common.less" type="text/css" rel="stylesheet" />
+    <link href="../static/css/about.less" type="text/css" rel="stylesheet" />
+    <link href="../static/css/lib/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div id="nav-bar">
+            <div class="nav-left">
+                <ul>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/blog/">Blog</a>
+                    </li>
+                    <li>
+                        <a href="/photography/">Photography</a>
+                    </li>
+                    <li class="active">
+                        <a href="/about/">About</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-right"></div>
+        </div>
+    </header>
+
+    <div id="left-nav-section">
+        <ul class="list-unstyled">
+            <li id="nav-about">
+                <i class="fa fa-circle-o"></i><span>About</span>
+            </li>
+            <li id="nav-exp">
+                <i class="fa fa-circle-o"></i><span>Experiences</span>
+            </li>
+            <li id="nav-skl">
+                <i class="fa fa-circle-o"></i><span>Skills</span>
+            </li>
+            <li id="nav-whyme">
+                <i class="fa fa-circle-o"></i><span>Why Me</span>
+            </li>
+        </ul>
+    </div>
+
+    <div id="about-section">
+        <div class="section-container">
+            <div class="section-title">
+                <div>ABOUT</div>
+                <span class="section-title-cutting">
+                    ------------------------------<i class="fa fa-star"></i>------------------------------
+                </span>
+            </div>
+            <div>
+                <dl>
+                    <dt>
+                        <i class="fa fa-user"></i>&nbsp;Legal Name:
+                    </dt>
+                    <dd>Zhuo Li</dd>
+                    <dt>
+                        <i class="fa fa-map-marker"></i>&nbsp;Born:
+                    </dt>
+                    <dd>Wuhan, China</dd>
+                    <dt>
+                        <i class="fa fa-graduation-cap"></i>&nbsp;Education:
+                    </dt>
+                    <dd>Zhejiang University | Columbia University | UIUC</dd>
+                    <dt>
+                        <i class="fa fa-sticky-note-o"></i>&nbsp;Description:
+                    </dt>
+                    <dd>Kevin is a self-driven, tech-enthusiastic young man who gets pretty much passionate on computer software development. With the education and working experiences in both China and North America, He holds the faith and is always trying to leverage cutting edge technologies to better improve the quality of human lives.<dd>
+                </dl>
+            </div>
+            <div>
+                <img src="../static/images/about/profile.jpg" alt="Profile Picture" class="img-circle" width="150px">
+                <div class="about-resume">
+                    <a href={{about.resume}} target="_blank">Download Resume</a>
+                </div>
+                <div class="about-resume">
+                    <a href={{about.linkedin}} target="_blank">LinkedIn Profile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div id="source-description">
+            Source codes hosted on
+            <a href="https://github.com/zhuolikevin/kevin-site-fe" target="_blank">
+                <i class="fa fa-github" aria-hidden="true"></i>&nbsp;GitHub
+            </a>
+        </div>
+    </footer>
+
+    <script src="../static/js/lib/jquery.min.js"></script>
+    <script src="../static/js/about.js"></script>
+</body>
+</html>
