@@ -34,7 +34,7 @@
         "comma-style": ["error", "last"],
         "computed-property-spacing": ["error", "never"],
         "func-call-spacing": ["error", "never"],
-        "indent": ["error", 4, { "SwitchCase": 1, "VariableDeclarator": 1 }],
+        "indent": ["error", 2, { "SwitchCase": 1, "VariableDeclarator": 1 }],
         "key-spacing": ["error", {
             "beforeColon": false,
             "afterColon": true,
@@ -75,6 +75,7 @@
     },
     "globals": {
         "fis": false,
-        "ProgressBar": false
+        "ProgressBar": false,
+        "PacProgress": false
     }
 }
