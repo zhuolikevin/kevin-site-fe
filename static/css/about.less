@@ -26,11 +26,44 @@
       margin-top: 10px;
     }
   }
+  .section-details {
+    position: relative;
+  }
 }
 
 #about-section {
   margin-top: 50px;
   width: 100%;
   .display-flex;
-  .justify-content-center
+  .justify-content-center;
+  .section-details {
+    font-family: "ubuntu-regular";
+    .detail-part {
+      .img-circle {
+        float: right;
+        border-radius: 10px;
+      }
+      ul {
+        li {
+          padding: 5px 0;
+          label {
+            font-weight: bold;
+            font-family: "lato-regular";
+            padding-right: 10px;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    .detail-description {
+      clear: both;
+      line-height: 30px;
+      text-align: justify;
+      label {
+        font-weight: bold;
+        font-family: "lato-regular";
+        font-size: 18px;
+      }
+    }
+  }
 }
