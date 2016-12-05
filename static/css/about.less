@@ -26,7 +26,7 @@
       margin-top: 10px;
     }
   }
-  .section-details {
+  .section-body {
     position: relative;
   }
 }
@@ -36,7 +36,7 @@
   width: 100%;
   .display-flex;
   .justify-content-center;
-  .section-details {
+  .section-body {
     font-family: "ubuntu-regular";
     .detail-part {
       .img-circle {
@@ -66,4 +66,94 @@
       }
     }
   }
+}
+
+#experience-section {
+  background: #eaeaea;
+  margin-top: 50px;
+  width: 100%;
+  .display-flex;
+  .justify-content-center;
+
+  .cbp_tmtimeline {
+    margin: 30px 0;
+    li {
+      position: relative;
+      .cbp_tmtime {
+        display: block;
+        width: 25%;
+        padding-right: 100px;
+        position: absolute;
+        left: -30px;
+        opacity: 0;
+        span {
+          display: block;
+          text-align: right;
+          &:first-child {
+            font-size: 0.9em;
+            color: #4d4e54;
+          }
+          &:last-child {
+            font-size: 2.9em;
+            color: #000000;
+          }
+        }
+      }
+      .cbp_tmicon {
+        width: 40px;
+        height: 40px;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        font-size: 1.4em;
+        line-height: 40px;
+        -webkit-font-smoothing: antialiased;
+        position: absolute;
+        color: #fff;
+        background: #777;
+        border-radius: 50%;
+        box-shadow: 0 0 0 8px #ccc;
+        text-align: center;
+        left: 20%;
+        top: 0;
+        margin: 0 0 0 -25px;
+        opacity: 0;
+        z-index: 1;
+      }
+      .cbp_tmline {
+        border: 5px solid #cccccc;
+        width: 10px;
+        height: 0px;
+        position: absolute;
+        left: 19%;
+      }
+      .cbp_tmlabel {
+        margin: 0 0 25px 25%;
+        background: transparent;
+        color: grey;
+        padding: 0em 2em;
+        font-size: 1.2em;
+        font-weight: 300;
+        line-height: 1.4;
+        position: relative;
+        min-height: 100px;
+        right: -30px;
+        opacity: 0;
+        h2 {
+          margin-top: 0px;
+          font-size: 1.7em;
+          color: red;
+          padding: 0 0 5px 0;
+          border-bottom: 1px solid rgba(0,0,0,0.4);
+        }
+      }
+    }
+  }
+}
+
+#source-description {
+  float: right;
+  position: relative;
 }
