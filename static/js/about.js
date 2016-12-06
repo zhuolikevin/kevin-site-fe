@@ -1,3 +1,17 @@
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 0) {
+    $('#nav-bar').css({
+      backgroundColor: '#f3f3f3',
+      boxShadow: '0px 1px 5px rgba(0,0,0,0.2)'
+    });
+  } else if ($(window).scrollTop() === 0) {
+    $('#nav-bar').css({
+      backgroundColor: 'transparent',
+      boxShadow: 'none'
+    });
+  }
+});
+
 var expPartFadeIn = function(index) {
   var curTag = '#exp-' + index;
   $(curTag + ' > .cbp_tmline')
@@ -14,10 +28,6 @@ var expPartFadeIn = function(index) {
   }, 1000);
 };
 $(window).scroll(function() {
-  if ($(window).scrollTop() >=
-    $('#experience-section .section-body').position().top + $('#exp-0').position().top - $(window).height() + 100) {
-    expPartFadeIn(0);
-  }
   if ($(window).scrollTop() >=
     $('#experience-section .section-body').position().top + $('#exp-1').position().top - $(window).height() + 100) {
     expPartFadeIn(1);
