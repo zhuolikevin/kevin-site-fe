@@ -1,3 +1,4 @@
+// experience-section
 var expPartFadeIn = function(index) {
   var curTag = '#exp-' + index;
   $(curTag + ' > .cbp_tmline')
@@ -43,3 +44,19 @@ $(window).scroll(function() {
     expPartFadeIn(7);
   }
 });
+
+// character-section
+$(document).on({
+  mouseenter: function() {
+    $(this).stop().animate({
+      backgroundColor: '#6e6e6e',
+      color: '#fff'
+    });
+  },
+  mouseleave: function() {
+    $(this).stop().animate({
+      backgroundColor: 'transparent',
+      color: '#222'
+    });
+  }
+}, '#chara-1, #chara-2, #chara-3, #chara-4');
