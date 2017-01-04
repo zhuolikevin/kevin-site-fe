@@ -148,7 +148,6 @@
 
 #experience-section {
   background: #eaeaea;
-  margin-top: 50px;
   width: 100%;
   .display-flex;
   .justify-content-center;
@@ -237,18 +236,56 @@
 }
 
 #skills-section {
-  margin-top: 50px;
   width: 100%;
   .display-flex;
   .justify-content-center;
   .section-body {
+    color: #808080;
+    margin: 30px 0;
     font-family: "ubuntu-regular";
+    .skill-select {
+      .display-flex;
+      .justify-content-center;
+      ul {
+        display: inline-block;
+        border: 1px solid #808080;
+        border-radius: 3px;
+        margin-bottom: 15px;
+        li {
+          display: inline-block;
+          padding: 5px 10px;
+          cursor: pointer;
+          transition: all .5s ease-in-out;
+          &:not(:last-child) {
+            border-right: 1px solid #808080;
+          }
+          &:hover {
+            color: #222;
+            background: #f5f3d7;
+          }
+        }
+      }
+    }
+    .skill-lists {
+      ul {
+        margin: 10px 0;
+        text-align: center;
+        li {
+          margin: 0 5px;
+          display: inline-block;
+          transition: all .5s ease-in-out;
+          &.skl-xl { font-size: 32px; }
+          &.skl-lg { font-size: 26px; }
+          &.skl-m { font-size: 20px; }
+          &.skl-s { font-size: 14px; }
+        }
+      }
+    }
   }
 }
 
 #characters-section {
   background: #eaeaea;
-  margin-top: 50px;
   width: 100%;
   .display-flex;
   .justify-content-center;

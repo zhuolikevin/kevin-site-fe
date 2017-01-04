@@ -45,6 +45,52 @@ $(window).scroll(function() {
   }
 });
 
+// skills-section
+$('#skl-fe').mouseenter(function() {
+  $('.skl-fe').css({
+    color: '#222',
+    'text-shadow': '2px 2px 1px rgba(0, 0, 0, 0.2)'
+  });
+}).mouseleave(function() {
+  $('.skl-fe').css({
+    color: '#808080',
+    'text-shadow': 'none'
+  });
+});
+$('#skl-be').mouseenter(function() {
+  $('.skl-be').css({
+    color: '#222',
+    'text-shadow': '2px 2px 1px rgba(0, 0, 0, 0.2)'
+  });
+}).mouseleave(function() {
+  $('.skl-be').css({
+    color: '#808080',
+    'text-shadow': 'none'
+  });
+});
+$('#skl-lang').mouseenter(function() {
+  $('.skl-lang').css({
+    color: '#222',
+    'text-shadow': '2px 2px 1px rgba(0, 0, 0, 0.2)'
+  });
+}).mouseleave(function() {
+  $('.skl-lang').css({
+    color: '#808080',
+    'text-shadow': 'none'
+  });
+});
+$('#skl-tools').mouseenter(function() {
+  $('.skl-tools').css({
+    color: '#222',
+    'text-shadow': '2px 2px 1px rgba(0, 0, 0, 0.2)'
+  });
+}).mouseleave(function() {
+  $('.skl-tools').css({
+    color: '#808080',
+    'text-shadow': 'none'
+  });
+});
+
 // character-section
 $(document).on({
   mouseenter: function() {
