@@ -378,7 +378,7 @@
           </span>
         </div>
         <div class="section-body">
-          <form id="contact-form">
+          <form name="contact" method="post" action="/api/contact_form/">
             <div class="form-row">
               <input name="first_name" placeholder="First Name" />
               <input name="last_name" placeholder="Last Name" />
@@ -390,7 +390,7 @@
               <textarea name="message" placeholder="Anything you want to tell me ..."></textarea>
             </div>
             <div class="form-row">
-              <button>Send it to Kevin!</button>
+              <input class="submit-button" type="submit" value="Send it to Kevin!" />
             </div>
           </form>
         </div>

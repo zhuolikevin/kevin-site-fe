@@ -191,3 +191,13 @@ $(document).on({
     });
   }
 }, '#chara-1, #chara-2, #chara-3, #chara-4');
+
+$('form[name=contact]').submit(function() {
+  // var serializedData = $(this).serialize();
+  $.post($(this).attr('action'), $(this).serialize(), function(res) {
+    // console.log(res);
+  });
+
+  return false; // prevent default action
+
+});
