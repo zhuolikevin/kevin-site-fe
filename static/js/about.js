@@ -1,3 +1,88 @@
+var changeFa = function(tag) {
+  $('#left-nav-section > ul > li > i').removeClass('fa-circle');
+  $('#left-nav-section > ul > li > i').addClass('fa-circle-o');
+  var tagToChange = '#nav-' + tag + ' > i';
+  $(tagToChange).removeClass('fa-circle-o');
+  $(tagToChange).addClass('fa-circle');
+};
+$(window).scroll(function() {
+  if ($(window).scrollTop() >= $('#experience-section').position().top * 0.75) {
+    $('#left-nav-section').css('opacity', '1');
+  } else {
+    $('#left-nav-section').css('opacity', '0');
+  }
+  if ($(window).scrollTop() <= $('#experience-section').position().top - 0.5 * $(window).height()) {
+    changeFa('about');
+  } else if ($(window).scrollTop() > $('#experience-section').position().top - 0.5 * $(window).height() &&
+  $(window).scrollTop() <= $('#skills-section').position().top - 0.5 * $(window).height()) {
+    changeFa('exp');
+  } else if ($(window).scrollTop() > $('#skills-section').position().top - 0.5 * $(window).height() &&
+  $(window).scrollTop() <= $('#characters-section').position().top - 0.5 * $(window).height()) {
+    changeFa('skl');
+  } else if ($(window).scrollTop() > $('#characters-section').position().top - 0.5 * $(window).height() &&
+  $(window).scrollTop() <= $('#contact-section').position().top - 0.5 * $(window).height()) {
+    changeFa('chara');
+  } else {
+    changeFa('contact');
+  }
+});
+$(document)
+  .on({
+    mouseenter: function() {
+      $('#nav-about > span').animate({opacity: 1}, 100);
+    },
+    mouseleave: function() {
+      $('#nav-about > span').animate({opacity: 0}, 100);
+    },
+    click: function() {
+      $('html, body').animate({scrollTop: 0}, 'slow');
+    }
+  }, '#nav-about > i')
+  .on({
+    mouseenter: function() {
+      $('#nav-exp > span').animate({opacity: 1}, 100);
+    },
+    mouseleave: function() {
+      $('#nav-exp > span').animate({opacity: 0}, 100);
+    },
+    click: function() {
+      $('html, body').animate({scrollTop: $('#experience-section').position().top - 50}, 'slow');
+    }
+  }, '#nav-exp > i')
+  .on({
+    mouseenter: function() {
+      $('#nav-skl > span').animate({opacity: 1}, 100);
+    },
+    mouseleave: function() {
+      $('#nav-skl > span').animate({opacity: 0}, 100);
+    },
+    click: function() {
+      $('html, body').animate({scrollTop: $('#skills-section').position().top - 50}, 'slow');
+    }
+  }, '#nav-skl > i')
+  .on({
+    mouseenter: function() {
+      $('#nav-chara > span').animate({opacity: 1}, 100);
+    },
+    mouseleave: function() {
+      $('#nav-chara > span').animate({opacity: 0}, 100);
+    },
+    click: function() {
+      $('html, body').animate({scrollTop: $('#characters-section').position().top - 50}, 'slow');
+    }
+  }, '#nav-chara > i')
+  .on({
+    mouseenter: function() {
+      $('#nav-contact > span').animate({opacity: 1}, 100);
+    },
+    mouseleave: function() {
+      $('#nav-contact > span').animate({opacity: 0}, 100);
+    },
+    click: function() {
+      $('html, body').animate({scrollTop: $('#contact-section').position().top - 50}, 'slow');
+    }
+  }, '#nav-contact > i');
+
 // experience-section
 var expPartFadeIn = function(index) {
   var curTag = '#exp-' + index;
@@ -91,7 +176,7 @@ $('#skl-tools').mouseenter(function() {
   });
 });
 
-// character-section
+// characters-section
 $(document).on({
   mouseenter: function() {
     $(this).stop().animate({
