@@ -289,6 +289,43 @@
   width: 100%;
   .display-flex;
   .justify-content-center;
+  .section-body {
+    .display-flex;
+    margin: 30px 0;
+    font-family: "ubuntu-regular";
+    .chara-detail {
+      .flex-one;
+      .display-flex;
+      .flex-direction-column;
+      .align-items-center;
+      margin: 0 15px;
+      .chara-icon {
+        height: 150px;
+        width: 150px;
+        background: #ccc;
+        font-size: 50px;
+        line-height: 150px;
+        text-align: center;
+        border-radius: 50%;
+        color: #222;
+        margin: 10px 0;
+        transition: all .5s ease-in-out;
+        &:hover {
+          color: #fff;
+          background: #777;
+        }
+      }
+      h3 {
+        font-size: 20px;
+        margin: 10px 0;
+      }
+      p {
+        margin: 10px 0;
+        color: #808080;
+        line-height: 1.25;
+      }
+    }
+  }
 }
 
 #contact-section {
