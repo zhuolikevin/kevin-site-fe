@@ -10,6 +10,11 @@ fis.match('static/**.{js,less,png}', {
   useHash: true
 });
 
+fis.match('static/js/about.js', {
+  preprocessor: fis.plugin('browserify'),
+  release: '$0'
+});
+
 fis.match('static/js/**.js', {
   optimizer: fis.plugin('uglify-js'),
   release: '$0'

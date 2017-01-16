@@ -1,3 +1,5 @@
+var url = require('./utils/url.js');
+
 var changeFa = function(tag) {
   $('#left-nav-section > ul > li > i').removeClass('fa-circle');
   $('#left-nav-section > ul > li > i').addClass('fa-circle-o');
@@ -192,11 +194,52 @@ $(document).on({
   }
 }, '#chara-1, #chara-2, #chara-3, #chara-4');
 
-$('form[name=contact]').submit(function() {
-  // var serializedData = $(this).serialize();
-  $.post($(this).attr('action'), $(this).serialize(), function(res) {
-    // console.log(res);
+// contact-section
+$(document).ready(function() {
+  $('#form-dialog').dialog({
+    autoOpen: false,
+    show: {
+      effect: 'blind',
+      duration: 300
+    },
+    hide: {
+      effect: 'blind',
+      duration: 300
+    }
   });
+});
+$('form[name=contact]').submit(function() {
+  var serializedData = $(this).serialize(),
+    formDataObj = url.queryToJson(serializedData),
+    errorPart = [];
+  if (!formDataObj.first_name) {
+    errorPart.push('first name');
+  }
+  if (!formDataObj.last_name) {
+    errorPart.push('last name');
+  }
+  if (!formDataObj.email) {
+    errorPart.push('email');
+  }
+  if (!formDataObj.message) {
+    errorPart.push('message');
+  }
+  if (errorPart.length > 0) {
+    var errorMsg = 'Please fill out your ' + errorPart.join(', ') + '.';
+    $('#form-dialog p').html(errorMsg);
+    $('#form-dialog').dialog({ title: 'Error' });
+    $('#form-dialog').dialog('open');
+  } else {
+    $.post($(this).attr('action'), $(this).serialize(), function(resp) {
+      $('#form-dialog p').html(resp.msg);
+      if (!resp || resp.status !== 'success') {
+        $('#form-dialog').dialog({ title: 'Error' });
+      } else {
+        $('#form-dialog').dialog({ title: 'Success' });
+      }
+      $('#form-dialog').dialog('open');
+    });
+  }
 
   return false; // prevent default action
 
