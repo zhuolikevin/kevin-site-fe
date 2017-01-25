@@ -10,7 +10,7 @@ var blinkPrintText = function(slogan) {
   $('#slogan').text(newText);
   setTimeout(function() {
     blinkPrintText(newSlogan);
-  }, 1000);
+  }, 100);
 };
 
 $(document)
