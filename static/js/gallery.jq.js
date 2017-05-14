@@ -1,7 +1,22 @@
-var sloganText = 'ONE PERSON, ONE CAMERA, ONE FOOT OF WORLD';
+var sloganText = 'Live Your Dream';
+var sloganText2 = 'Wear Your Passion';
+
+var blinkPrintText2 = function(slogan) {
+  if (!slogan) {
+    return;
+  }
+  var newText = $('#slogan2').text() + slogan[0],
+    newSlogan = slogan.substr(1);
+
+  $('#slogan2').text(newText);
+  setTimeout(function() {
+    blinkPrintText2(newSlogan);
+  }, 100);
+};
 
 var blinkPrintText = function(slogan) {
   if (!slogan) {
+    blinkPrintText2(sloganText2);
     return;
   }
   var newText = $('#slogan').text() + slogan[0],
@@ -15,6 +30,7 @@ var blinkPrintText = function(slogan) {
 
 $(document)
   .ready(function() {
+    $('.parallax').parallax();
     blinkPrintText(sloganText);
   })
   .on({

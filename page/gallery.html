@@ -9,13 +9,15 @@
   <meta name="keywords" content="ZK Kevin Zhuo" />
   <meta name="description" content="Kevin Li's site" />
   <!-- for FF, Chrome, Opera -->
-  <link rel="icon" type="image/x-icon" href="../static/images/favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <!-- for IE -->
-  <link rel="shortcut icon" type="image/x-icon" href="../static/images/favicon.ico" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 
+  <link href="../static/css/lib/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="../static/css/lib/materialize.min.css" type="text/css" rel="stylesheet" />
   <link href="../static/css/common.less" type="text/css" rel="stylesheet" />
   <link href="../static/css/gallery.less" type="text/css" rel="stylesheet" />
-  <link href="../static/css/lib/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
   <header>
@@ -43,10 +45,15 @@
     </div>
   </header>
 
+  <div class="parallax-container">
+    <div class="slogan" id="slogan"></div>
+    <div class="slogan" id="slogan2"></div>
+    <div class="parallax"><img src="../static/images/background.jpg"></div>
+  </div>
+
   <div id="gallery-content">
-    <p style="margin: 60px 40px">Under Construction~ This part will be the gallery for my traveling, postcards, collections and photography</p>
     <div class="description">
-      <span id="slogan"></span>
+
     </div>
     <div class="content">
       <div id="lofter" class="photo-site">
@@ -86,6 +93,8 @@
   </footer>
 
   <script src="../static/js/lib/jquery.min.js"></script>
-  <script src="../static/js/gallery.js"></script>
+  <script src="../static/js/lib/materialize.min.js"></script>
+  <script src="../static/js/common.js"></script>
+  <script src="../static/js/gallery.jq.js"></script>
 </body>
 </html>

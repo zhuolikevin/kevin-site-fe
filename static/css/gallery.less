@@ -1,8 +1,21 @@
 @import "global.less";
 
-#nav-bar {
-  background: #f3f3f3;
-  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+.parallax-container {
+  .display-flex;
+  .flex-direction-column;
+  .align-items-center;
+  .justify-content-center;
+  height: 75vh;
+  .slogan {
+    font-size: 50px;
+    color: #b1dcfb;
+  }
+  .parallax {
+    img {
+      width: 100vw;
+      filter: brightness(75%) blur(2px);
+    }
+  }
 }
 
 #gallery-content {
@@ -81,4 +94,12 @@
 
 @keyframes blink-caret {
   50% { border-color: transparent; }
+}
+
+#source-description {
+  float: right;
+  position: relative;
+  margin: 20px 30px;
+  bottom: 0;
+  right: 0;
 }
