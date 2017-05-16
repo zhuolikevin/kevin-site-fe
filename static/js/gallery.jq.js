@@ -31,6 +31,11 @@ var blinkPrintText = function(slogan) {
 $(document)
   .ready(function() {
     $('.parallax').parallax();
+    $('.materialboxed').materialbox();
+    $('.masonry-grid').masonry({
+      itemSelector: '.grid-item',
+      columnWidth: 200
+    });
     blinkPrintText(sloganText);
   })
   .on({
