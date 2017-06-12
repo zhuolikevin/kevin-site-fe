@@ -34,7 +34,8 @@ $(document)
     $('.materialboxed').materialbox();
     $('.masonry-grid').masonry({
       itemSelector: '.grid-item',
-      columnWidth: 200
+      columnWidth: '.grid-sizer',
+      percentPosition: true
     });
     blinkPrintText(sloganText);
   })
