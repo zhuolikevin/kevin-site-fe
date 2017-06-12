@@ -74,6 +74,7 @@
         }]
     },
     "globals": {
+        "Vue": false,
         "fis": false,
         "ProgressBar": false,
         "PacProgress": false

@@ -19,7 +19,8 @@
   <link href="../static/css/common.less" type="text/css" rel="stylesheet" />
   <link href="../static/css/gallery.less" type="text/css" rel="stylesheet" />
 </head>
-<body>
+<body id="app">
+  {{fuck}}
   <header>
     <div id="nav-bar">
       <div class="nav-left">
@@ -56,35 +57,8 @@
   <div id="gallery-content">
     <div class="masonry-grid">
       <div class="grid-sizer"></div>
-      <div class="grid-item">
-        <img class="materialboxed" src="https://c1.staticflickr.com/5/4248/34358100580_d598607fe5_h.jpg" alt="DSC_3656">
-      </div>
-      <div class="grid-item">
-        <img class="materialboxed" src="https://c1.staticflickr.com/5/4244/33933768993_e888a1bff1_h.jpg" alt="DSC_2721">
-      </div>
-      <div class="grid-item">
-        <img src="https://c1.staticflickr.com/5/4157/33933770833_e283199b01_h.jpg" alt="DSC_2111">
-      </div>
-      <div class="grid-item">
-        <img src="https://c1.staticflickr.com/5/4223/34358105820_7ac1763607_h.jpg" alt="DSC_1108">
-      </div>
-      <div class="grid-item">
-        <img src="https://c1.staticflickr.com/5/4203/34702455176_019e79dd7f_h.jpg" alt="DSC_3916-2">
-      </div>
-      <div class="grid-item">
-        <img src="https://c1.staticflickr.com/5/4227/34611129531_11f73c3e5a_h.jpg" alt="DSC_3900-2">
-      </div>
-      <div class="grid-item">
-        <img src="https://c1.staticflickr.com/5/4180/34702466046_3e1b2b9c74_h.jpg" alt="DSC_3839"></a>
-      </div>
-      <div class="grid-item">
-        <img src="https://c1.staticflickr.com/5/4190/34611133841_b1e6c3f99e_h.jpg" alt="DSC_3694">
-      </div>
-      <div class="grid-item">
-        <img src="https://c1.staticflickr.com/5/4273/34611135001_8afdbf5572_h.jpg" alt="DSC_3644">
-      </div>
-      <div class="grid-item">
-        <img src="https://c1.staticflickr.com/5/4194/34702477786_1f8e7ba635_h.jpg" alt="DSC_3640">
+      <div v-for="photoUrl in photoUrlList" class="grid-item">
+        <img class="materialboxed" :src="photoUrl">
       </div>
     </div>
   </div>
@@ -125,10 +99,12 @@
     </div>
   </footer>
 
+  <script src="../static/js/lib/vue.min.js"></script>
   <script src="../static/js/lib/jquery.min.js"></script>
   <script src="../static/js/lib/materialize.min.js"></script>
   <script src="../static/js/lib/masonry.pkgd.min.js"></script>
   <script src="../static/js/common.js"></script>
+  <script src="../static/js/gallery.js"></script>
   <script src="../static/js/gallery.jq.js"></script>
   <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 </body>
