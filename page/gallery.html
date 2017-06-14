@@ -57,8 +57,8 @@
   <div id="gallery-content">
     <div class="masonry-grid">
       <div class="grid-sizer"></div>
-      <div v-for="photoUrl in photoUrlList" class="grid-item">
-        <img class="materialboxed" :src="photoUrl">
+      <div v-for="photo in photoList" class="grid-item">
+        <img class="materialboxed" :src="photo.photo_url">
       </div>
     </div>
   </div>
@@ -103,6 +103,7 @@
   <script src="../static/js/lib/jquery.min.js"></script>
   <script src="../static/js/lib/materialize.min.js"></script>
   <script src="../static/js/lib/masonry.pkgd.min.js"></script>
+  <script src="../static/js/lib/imagesloaded.pkgd.min.js"></script>
   <script src="../static/js/common.js"></script>
   <script src="../static/js/gallery.js"></script>
   <script src="../static/js/gallery.jq.js"></script>
