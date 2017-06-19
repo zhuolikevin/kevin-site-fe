@@ -10,7 +10,7 @@ fis.match('static/**.{js,less,png}', {
   useHash: true
 });
 
-fis.match('static/js/about.js', {
+fis.match('static/js/about.jq.js', {
   preprocessor: fis.plugin('browserify'),
   release: '$0'
 });
