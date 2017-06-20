@@ -40,7 +40,8 @@ var app = new Vue({
           first_name: this.firstName,
           last_name: this.lastName,
           email: this.email,
-          message: this.message
+          message: this.message,
+          'g-recaptcha-response': grecaptcha.getResponse()
         },
         success: function(resp) {
           if (!resp || resp.status !== 'success') {
@@ -51,7 +52,7 @@ var app = new Vue({
           _this.lastName = '';
           _this.email = '';
           _this.message = '';
-          Materialize.toast('Successfully sent your message to Kevin!');
+          Materialize.toast('Successfully sent your message to Kevin!', 3000);
         }
       });
     }

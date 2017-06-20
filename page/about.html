@@ -26,6 +26,7 @@
     ga('create', 'UA-96949653-1', 'auto');
     ga('send', 'pageview');
   </script>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body id="app">
   <header>
@@ -391,7 +392,7 @@
           </span>
         </div>
         <div class="section-body">
-          <form>
+          <form method="post">
             <div class="form-row">
               <input v-model="firstName" placeholder="First Name" />
               <input v-model="lastName" placeholder="Last Name" />
@@ -401,6 +402,9 @@
             </div>
             <div class="form-row">
               <textarea v-model="message" placeholder="Anything you want to tell me ..."></textarea>
+            </div>
+            <div class="form-row">
+              <div class="g-recaptcha" data-sitekey="6LfVMSYUAAAAAME-p1tu1bphYJlozMHjDt20aXyg"></div>
             </div>
             <div class="form-row">
               <div class="submit-button" @click="onSubmitFormClick">Send it to Kevin!</div>

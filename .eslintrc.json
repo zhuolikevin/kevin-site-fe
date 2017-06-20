@@ -78,6 +78,7 @@
         "fis": false,
         "ProgressBar": false,
         "PacProgress": false,
-        "Materialize": false
+        "Materialize": false,
+        "grecaptcha": false
     }
 }
