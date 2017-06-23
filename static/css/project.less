@@ -1,12 +1,62 @@
 @import "global.less";
 
-section {
+#nav-bar {
+  background: #f3f3f3;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.project-section {
   height: calc(~"100vh - 50px");
   margin-top: 50px;
+  .display-flex;
+  .flex-direction-row;
+  .align-items-center;
+  .justify-content-center;
 }
 
 #zlank-section {
-
+  .background-image {
+    height: 100%;
+    width: 100%;
+    background-image: url(/static/images/project/zlank-1.png);
+    background-repeat: no-repeat;
+    background-size: 75%;
+    background-position-x: 120%;
+    background-position-y: 60%;
+  }
+  background: #abbaab;
+  background: -webkit-linear-gradient(to bottom, #ffffff, #abbaab);
+  background: linear-gradient(to bottom, #ffffff, #abbaab);
+  .content {
+    .display-flex;
+    .flex-direction-column;
+    .justify-content-center;
+    width: 40%;
+    margin: 10%;
+    line-height: 25px;
+    .title {
+      font-size: 30px;
+      margin-bottom: 25px;
+      font-family: "ubuntu-regular";
+    }
+    .abstract {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+    .details {
+      font-size: 18px;
+      margin-bottom: 20px;
+      li {
+        margin: 5px 0;
+        i { margin-right: 5px; }
+      }
+    }
+    .learn-more {
+      a {
+        i { margin-right: 10px; }
+      }
+    }
+  }
 }
 
 #source-description {

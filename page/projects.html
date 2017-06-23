@@ -16,6 +16,7 @@
   <link href="../static/css/common.less" type="text/css" rel="stylesheet" />
   <link href="../static/css/project.less" type="text/css" rel="stylesheet" />
   <link href="../static/css/lib/materialize.min.css" type="text/css" rel="stylesheet" />
+  <link href="../static/css/lib/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -54,13 +55,40 @@
     </div>
   </header>
 
-  <section id="zlank-section">
-    <div>
+  <section class="project-section" id="zlank-section">
+    <div class="background-image">
+      <div class="content">
+        <div class="title">
+          Zlank
+        </div>
+        <div class="abstract">
+          My website hosted on Amazon Elastic Beanstalk with personal blogs, project demo, life gallery and self introduction.
+        </div>
+        <div class="details">
+          <ul>
+            <li>
+              <i class="fa fa-check" aria-hidden="true"></i>
+              Vue.js + Node.js/Express.js + DynamoDB
+            </li>
+            <li>
+              <i class="fa fa-check" aria-hidden="true"></i>
+              Jekyll based blog with Disqus comments
+            </li>
+            <li>
+              <i class="fa fa-check" aria-hidden="true"></i>
+              Google Analytics powered
+            </li>
+          </ul>
+        </div>
+        <div class="learn-more">
+          <a class="waves-effect waves-light btn indigo lighten-2" href="https://github.com/zhuolikevin/kevin-site-fe" target="_blank"><i class="fa fa-github" aria-hidden="true"></i>view on Github</a>
+        </div>
+      </div>
+    </div>
 
-    </div>
-    <div>
+    <!-- <div class="half-part img-part">
       <img src="../static/images/project/zlank-1.png" />
-    </div>
+    </div> -->
   </section>
 
   <!-- <section id="upintheair-section">
@@ -109,7 +137,6 @@
 
   <script src="../static/js/lib/jquery.min.js"></script>
   <script src="../static/js/lib/materialize.min.js"></script>
-  <script src="../static/js/common.js"></script>
   <script src="../static/js/project.jq.js"></script>
 </body>
 </html>
