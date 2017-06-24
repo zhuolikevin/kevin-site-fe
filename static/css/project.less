@@ -7,7 +7,6 @@
 
 .project-section {
   height: calc(~"100vh - 50px");
-  margin-top: 50px;
   .display-flex;
   .flex-direction-row;
   .align-items-center;
@@ -24,6 +23,7 @@
     background-position-x: 120%;
     background-position-y: 60%;
   }
+  margin-top: 50px;
   background: #abbaab;
   background: -webkit-linear-gradient(to bottom, #ffffff, #abbaab);
   background: linear-gradient(to bottom, #ffffff, #abbaab);
@@ -63,7 +63,17 @@
     }
     .learn-more {
       a {
+        margin: 0 5px;
+        &:first-child {
+          margin-left: 0;
+        }
+        &.grey:hover {
+          background: #616161 !important;
+        }
         i { margin-right: 10px; }
+      }
+      .btn {
+        padding: 0 1rem;
       }
       // for animation
       opacity: 0;
@@ -71,10 +81,84 @@
   }
 }
 
-#source-description {
-  float: right;
-  position: relative;
-  margin: 20px 30px;
-  bottom: 0;
-  right: 0;
+#upintheair-section {
+  background: #FFEEEE;
+  background: -webkit-linear-gradient(to left, #DDEFBB, #FFEEEE);
+  background: linear-gradient(to left, #DDEFBB, #FFEEEE);
+  margin: 0;
+  .slider {
+    background: transparent;
+    width: 90%;
+    margin: 0 5%;
+    .slides {
+      background: transparent;
+      li {
+        img {
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+  .content {
+    .display-flex;
+    .flex-direction-column;
+    .justify-content-center;
+    line-height: 25px;
+    .title {
+      font-size: 30px;
+      margin-bottom: 25px;
+      font-family: "ubuntu-regular";
+      // for animation
+      opacity: 0;
+    }
+    .abstract {
+      font-size: 20px;
+      margin-bottom: 15px;
+      width: 90%;
+      // for animation
+      position: relative;
+      top: 20px;
+      opacity: 0;
+    }
+    .details {
+      font-size: 18px;
+      margin-bottom: 20px;
+      li {
+        margin: 5px 0;
+        i { margin-right: 5px; }
+        // for animation
+        position: relative;
+        left: 20px;
+        opacity: 0;
+      }
+    }
+    .learn-more {
+      a {
+        margin: 0 5px;
+        &:first-child {
+          margin-left: 0;
+        }
+        &.grey:hover {
+          background: #616161 !important;
+        }
+        &.teal:hover {
+          background: #00897b !important;
+        }
+        &.red:hover {
+          background: #d32f2f !important;
+        }
+        &.blue:hover {
+          background: #1e88e5 !important;
+        }
+        i { margin-right: 10px; }
+      }
+      .btn {
+        padding: 0 1rem;
+      }
+      // for animation
+      opacity: 0;
+    }
+  }
 }
