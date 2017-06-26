@@ -11,96 +11,6 @@
   .flex-direction-row;
   .align-items-center;
   .justify-content-center;
-}
-
-#zlank-section {
-  .background-image {
-    height: 100%;
-    width: 100%;
-    background-image: url(/static/images/project/zlank-1.png);
-    background-repeat: no-repeat;
-    background-size: 75%;
-    background-position-x: 120%;
-    background-position-y: 60%;
-  }
-  margin-top: 50px;
-  background: #abbaab;
-  background: -webkit-linear-gradient(to bottom, #ffffff, #abbaab);
-  background: linear-gradient(to bottom, #ffffff, #abbaab);
-  .content {
-    .display-flex;
-    .flex-direction-column;
-    .justify-content-center;
-    width: 40%;
-    margin: 10%;
-    line-height: 25px;
-    .title {
-      font-size: 30px;
-      margin-bottom: 25px;
-      font-family: "ubuntu-regular";
-      // for animation
-      opacity: 0;
-    }
-    .abstract {
-      font-size: 20px;
-      margin-bottom: 15px;
-      // for animation
-      position: relative;
-      top: 20px;
-      opacity: 0;
-    }
-    .details {
-      font-size: 18px;
-      margin-bottom: 20px;
-      li {
-        margin: 5px 0;
-        i { margin-right: 5px; }
-        // for animation
-        position: relative;
-        left: 20px;
-        opacity: 0;
-      }
-    }
-    .learn-more {
-      a {
-        margin: 0 5px;
-        &:first-child {
-          margin-left: 0;
-        }
-        &.grey:hover {
-          background: #616161 !important;
-        }
-        i { margin-right: 10px; }
-      }
-      .btn {
-        padding: 0 1rem;
-      }
-      // for animation
-      opacity: 0;
-    }
-  }
-}
-
-#upintheair-section {
-  background: #FFEEEE;
-  background: -webkit-linear-gradient(to left, #DDEFBB, #FFEEEE);
-  background: linear-gradient(to left, #DDEFBB, #FFEEEE);
-  margin: 0;
-  .slider {
-    background: transparent;
-    width: 90%;
-    margin: 0 5%;
-    .slides {
-      background: transparent;
-      li {
-        img {
-          background-size: contain;
-          background-position: center;
-          background-repeat: no-repeat;
-        }
-      }
-    }
-  }
   .content {
     .display-flex;
     .flex-direction-column;
@@ -161,4 +71,77 @@
       opacity: 0;
     }
   }
+}
+
+#zlank-section {
+  margin-top: 50px;
+  background: #abbaab;
+  background: -webkit-linear-gradient(to bottom, #ffffff, #abbaab);
+  background: linear-gradient(to bottom, #ffffff, #abbaab);
+  .background-image {
+    height: 100%;
+    width: 100%;
+    background-image: url(/static/images/project/zlank-1.png);
+    background-repeat: no-repeat;
+    background-size: 75%;
+    background-position-x: 120%;
+    background-position-y: 60%;
+  }
+  .content {
+    width: 40%;
+    margin: 10%;
+  }
+}
+
+#upintheair-section {
+  background: #FFEEEE;
+  background: -webkit-linear-gradient(to left, #DDEFBB, #FFEEEE);
+  background: linear-gradient(to left, #DDEFBB, #FFEEEE);
+  margin: 0;
+  .slider {
+    background: transparent;
+    width: 90%;
+    margin: 0 5%;
+    .slides {
+      background: transparent;
+      li {
+        img {
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+}
+
+#pacprogress-section {
+  background: #F0F2F0;
+  background: -webkit-linear-gradient(75deg, #F0F2F0, #000C40);
+  background: linear-gradient(75deg, #F0F2F0, #000C40);
+  .background-image {
+    height: 100%;
+    width: 100%;
+    background-image: url(/static/images/project/pacprogress-1.png);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position-x: 110%;
+    background-position-y: 150%;
+  }
+  .content {
+    width: 40%;
+    margin: 10%;
+  }
+}
+
+#parking-section {
+  background: #EDE574;
+  background: -webkit-linear-gradient(to left, #E1F5C4, #EDE574);
+  background: linear-gradient(to left, #E1F5C4, #EDE574);
+}
+
+#weather-section {
+  background: #DAE2F8;
+  background: -webkit-linear-gradient(to left, #D6A4A4, #DAE2F8);
+  background: linear-gradient(to left, #D6A4A4, #DAE2F8);
 }
