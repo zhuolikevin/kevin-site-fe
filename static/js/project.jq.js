@@ -78,8 +78,7 @@ $(window).scroll(function() {
       opacity: 1
     }, 500);
   }
-  if ($(window).scrollTop() > $('#parking-section').position().top - 0.5 * $(window).height() &&
-  $(window).scrollTop() <= $('#weather-section').position().top - 0.5 * $(window).height()) {
+  if ($(window).scrollTop() > $('#parking-section').position().top - 0.5 * $(window).height()) {
     $('#parking-section .content .title').animate({
       opacity: 1
     }, 500);
