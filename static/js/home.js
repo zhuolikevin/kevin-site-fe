@@ -20,7 +20,7 @@ $(document).ready(function() {
     strokeWidth: 2,
     easing: 'easeInOut',
     duration: 1000,
-    color: '#5f91a0',
+    color: '#cecece',
     svgStyle: null
   });
   bar.animate(1.0);
