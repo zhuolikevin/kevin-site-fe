@@ -70,9 +70,6 @@
       <li id="nav-chara">
         <i class="fa fa-circle-o"></i><span>Characters</span>
       </li>
-      <li id="nav-contact">
-        <i class="fa fa-circle-o"></i><span>Contact</span>
-      </li>
     </ul>
   </div>
 
@@ -383,37 +380,6 @@
     </div>
   </div>
 
-  <div id="contact-section">
-    <div class="section-container">
-      <div class="section-title">
-        <div>Contact</div>
-          <span class="section-title-cutting">
-              ------------------------------<i class="fa fa-star"></i>------------------------------
-          </span>
-        </div>
-        <div class="section-body">
-          <form method="post">
-            <div class="form-row">
-              <input v-model="firstName" placeholder="First Name" />
-              <input v-model="lastName" placeholder="Last Name" />
-            </div>
-            <div class="form-row">
-              <input v-model="email" placeholder="Email"/>
-            </div>
-            <div class="form-row">
-              <textarea v-model="message" placeholder="Anything you want to tell me ..."></textarea>
-            </div>
-            <div class="form-row">
-              <div class="g-recaptcha" data-sitekey="6LfVMSYUAAAAAME-p1tu1bphYJlozMHjDt20aXyg"></div>
-            </div>
-            <div class="form-row">
-              <div class="submit-button" @click="onSubmitFormClick">Send it to Kevin!</div>
-            </div>
-          </form>
-        </div>
-    </div>
-  </div>
-
   <footer>
     <div id="source-description">
       Source codes hosted on
@@ -427,7 +393,6 @@
   <script src="../../static/js/lib/jquery.min.js"></script>
   <script src="../../static/js/lib/materialize.min.js"></script>
   <script src="../../static/js/common.js"></script>
-  <script src="../../static/js/about.js"></script>
   <script src="../../static/js/about.jq.js"></script>
 </body>
 </html>

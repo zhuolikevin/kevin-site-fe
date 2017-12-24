@@ -19,11 +19,8 @@ $(window).scroll(function() {
   } else if ($(window).scrollTop() > $('#skills-section').position().top - 0.5 * $(window).height() &&
   $(window).scrollTop() <= $('#characters-section').position().top - 0.5 * $(window).height()) {
     changeFa('skl');
-  } else if ($(window).scrollTop() > $('#characters-section').position().top - 0.5 * $(window).height() &&
-  $(window).scrollTop() <= $('#contact-section').position().top - 0.5 * $(window).height()) {
-    changeFa('chara');
   } else {
-    changeFa('contact');
+    changeFa('chara');
   }
 });
 $(document)
@@ -70,18 +67,7 @@ $(document)
     click: function() {
       $('html, body').animate({scrollTop: $('#characters-section').position().top - 50}, 'slow');
     }
-  }, '#nav-chara > i')
-  .on({
-    mouseenter: function() {
-      $('#nav-contact > span').animate({opacity: 1}, 100);
-    },
-    mouseleave: function() {
-      $('#nav-contact > span').animate({opacity: 0}, 100);
-    },
-    click: function() {
-      $('html, body').animate({scrollTop: $('#contact-section').position().top - 50}, 'slow');
-    }
-  }, '#nav-contact > i');
+  }, '#nav-chara > i');
 
 // experience-section
 var expPartFadeIn = function(index) {

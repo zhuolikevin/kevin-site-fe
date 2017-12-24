@@ -29,7 +29,8 @@ $(document).ready(function() {
     pacProgress = new PacProgress('#pac-progressbar', {
       width: 800,
       height: 20,
-      totalDots: 30
+      totalDots: 30,
+      dotColor: '#fafafa'
     });
   setInterval(function() {
     pacProgress.draw(i);
