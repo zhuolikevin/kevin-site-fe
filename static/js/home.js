@@ -36,6 +36,9 @@ $(document).ready(function() {
     pacProgress.draw(i);
     i = (i + 1) % 100;
   }, 500);
+
+  var shootingStarObj = new window.ShootingStar('body');
+  shootingStarObj.launch(5);
 });
 
 $('#project-canvas')

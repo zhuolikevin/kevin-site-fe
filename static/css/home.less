@@ -1,5 +1,14 @@
 @import "global.less";
 
+.stars {
+  z-index: 0; position: absolute;
+  background-image: url(   http://www.14denoviembre.es/img/hori.png ), url( http://www.14denoviembre.es/img/stars_5.png );
+  background-repeat: repeat-x,repeat-x repeat-y;
+  transform:translate3D(0em, 0em, 0);
+  animation: stars 21s ease;
+  transform-style: preserve-3d;
+}
+
 #home-content {
   .display-flex;
   .align-items-center;
