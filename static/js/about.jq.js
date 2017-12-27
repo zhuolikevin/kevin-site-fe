@@ -1,3 +1,7 @@
+$(document).ready(function() {
+  $('#about-section > img').animate({opacity: 1}, 1500);
+  $('#about-section .follow-icons').animate({opacity: 1}, 1500);
+});
 var changeFa = function(tag) {
   $('#left-nav-section > ul > li > i').removeClass('fa-circle');
   $('#left-nav-section > ul > li > i').addClass('fa-circle-o');

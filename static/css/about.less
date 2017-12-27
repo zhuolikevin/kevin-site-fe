@@ -57,9 +57,51 @@ body { box-sizing: content-box; }
   overflow: hidden;
   background: #bcb6c0;
   width: 100%;
+  .description {
+    float: left;
+    width: 40%;
+    height: 100vh;
+    .display-flex;
+    .flex-direction-column;
+    .justify-content-center;
+    margin-left: 10%;
+    color: #333;
+    .introduction {
+      font-size: 24px;
+      p {
+        margin: 15px 0;
+      }
+    }
+    .follow-icons {
+      margin: 10px 0;
+      opacity: 0;
+      ul {
+        margin: 0;
+        padding: 0;
+        .display-flex;
+        font-size: 40px;
+        li {
+          margin: 0 5px;
+          &:first-child {
+            margin-left: 0;
+          }
+          a {
+            text-decoration: none;
+            color: #6b6b6b;
+            &:hover.icon-facebook { color: #3b5998; }
+            &:hover.icon-instagram { color: #9437bd; }
+            &:hover.icon-twitter { color: #1da1f2; }
+            &:hover.icon-linkedin { color: #1a85bc; }
+            &:hover.icon-github { color: #333333; }
+          }
+        }
+      }
+    }
+  }
   img {
     float: right;
     height: 100vh;
+    opacity: 0;
   }
 }
 
