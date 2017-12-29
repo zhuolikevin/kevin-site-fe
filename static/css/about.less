@@ -53,6 +53,27 @@ body { box-sizing: content-box; }
   }
 }
 
+.transition-black-white {
+  height: 0;
+  width: 0;
+  border-style: solid;
+  border-width: 30px 50vw;
+  border-top-color: #333333;
+  border-left-color: #333333;
+  border-bottom-color: #bcb6c0;
+  border-right-color: #bcb6c0;
+}
+.transition-white-black {
+  height: 0;
+  width: 0;
+  border-style: solid;
+  border-width: 30px 50vw;
+  border-bottom-color: #333333;
+  border-left-color: #333333;
+  border-top-color: #bcb6c0;
+  border-right-color: #bcb6c0;
+}
+
 #about-section {
   overflow: hidden;
   background: #bcb6c0;
@@ -194,6 +215,7 @@ body { box-sizing: content-box; }
 }
 
 #skills-section {
+  height: calc(~"100vh - 60px");
   width: 100%;
   background: #bcb6c0;
   .display-flex;
@@ -244,7 +266,7 @@ body { box-sizing: content-box; }
 }
 
 #characters-section {
-  background: #eaeaea;
+  background: #333333;
   width: 100%;
   .display-flex;
   .justify-content-center;
