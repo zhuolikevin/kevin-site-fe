@@ -111,11 +111,11 @@ $(window).scroll(function() {
     expPartFadeIn(5);
   }
   if ($(window).scrollTop() >=
-    $('#experience-section .section-body').position().top + $('#exp-5').position().top - $(window).height() + 100) {
+    $('#experience-section .section-body').position().top + $('#exp-6').position().top - $(window).height() + 100) {
     expPartFadeIn(6);
   }
   if ($(window).scrollTop() >=
-    $('#experience-section .section-body').position().top + $('#exp-5').position().top - $(window).height() + 100) {
+    $('#experience-section .section-body').position().top + $('#exp-7').position().top - $(window).height() + 100) {
     expPartFadeIn(7);
   }
 });

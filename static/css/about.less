@@ -39,7 +39,7 @@ body { box-sizing: content-box; }
 .section-container {
   max-width: 1000px;
   width: 70%;
-  margin: 30px 0;
+  margin: 50px 0 30px;
   .section-title {
     text-align: center;
     font-size: 30px;
@@ -106,7 +106,7 @@ body { box-sizing: content-box; }
 }
 
 #experience-section {
-  background: #eaeaea;
+  background: #333333;
   width: 100%;
   .display-flex;
   .justify-content-center;
@@ -120,45 +120,43 @@ body { box-sizing: content-box; }
         position: absolute;
         left: -30px;
         opacity: 0;
+        width: 80px;
         span {
           display: block;
           text-align: right;
           &:first-child {
             font-size: 1em;
-            color: #4d4e54;
+            color: #cecece;
           }
           &:last-child {
             font-size: 2em;
-            color: #000000;
+            color: #fafafa;
           }
         }
       }
       .cbp_tmicon {
-        width: 40px;
-        height: 40px;
-        font-size: 1.4em;
-        line-height: 40px;
         position: absolute;
-        color: #fff;
-        background: #777;
-        border-radius: 50%;
-        border: 8px solid #ccc;
-        text-align: center;
         left: 100px;
         top: 0;
         opacity: 0;
         z-index: 1;
+        img {
+          height: 40px;
+          border-radius: 50%;
+          border: 8px solid #ccc;
+        }
       }
       .cbp_tmline {
         background: #cccccc;
         width: 10px;
         position: absolute;
         left: 123px;
+        top: 5px;
       }
       .cbp_tmlabel {
         margin: 0 0 25px 25%;
         background: transparent;
-        color: grey;
+        color: #fafafa;
         font-size: 16px;
         font-weight: 300;
         line-height: 1.4;
@@ -168,9 +166,9 @@ body { box-sizing: content-box; }
         opacity: 0;
         h2 {
           font-size: 24px;
-          color: #ca3d3d;
+          color: #8facff;
           padding-bottom: 5px;
-          border-bottom: 1px solid rgba(0,0,0,0.4);
+          border-bottom: 1px solid #b1b1b1;
         }
         .details {
           margin: 5px 0;
@@ -188,6 +186,7 @@ body { box-sizing: content-box; }
         }
         .location {
           margin: 10px 0;
+          color: #ababab;
         }
       }
     }
@@ -196,6 +195,7 @@ body { box-sizing: content-box; }
 
 #skills-section {
   width: 100%;
+  background: #bcb6c0;
   .display-flex;
   .justify-content-center;
   .section-body {
